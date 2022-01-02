@@ -1,0 +1,234 @@
+.addPerson {
+  &--container {
+    width: 98rem;
+    margin: 36px auto;
+    margin-bottom: 62px;
+    position: relative;
+
+    a {
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    @media only screen and (max-width: 1100px) {
+      width: 90rem;
+    }
+
+    @media only screen and (max-width: 1000px) {
+      width: 85rem;
+    }
+
+    @media only screen and (max-width: 940px) {
+      width: 50rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+      width: 45rem;
+    }
+
+    @media only screen and (max-width: 500px) {
+      width: 36rem;
+    }
+
+    @media only screen and (max-width: 400px) {
+      width: 34rem;
+    }
+  }
+
+  &--header {
+    display: flex;
+    align-items: center;
+
+    &__back {
+      width: 32px;
+      height: 32px;
+      background: #32363c;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 100px;
+      fill: #bbbcbc;
+      padding: 5px;
+      margin-right: 27px;
+    }
+
+    &__text {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 23px;
+
+      color: #bbbcbc;
+    }
+  }
+
+  &--info {
+    margin-top: 36px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    grid-template-rows: repeat(8, min-content);
+    row-gap: 20px;
+
+    @media only screen and (max-width: 940px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: unset;
+    }
+    &__title {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 21px;
+      line-height: 20px;
+
+      color: #dddddd;
+    }
+
+    &__input {
+      label {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 21px;
+        line-height: 20px;
+        color: #bbbcbc;
+        transform: translate(17px, 26px);
+      }
+
+      :global(.MuiInputLabel-outlined.MuiInputLabel-shrink) {
+        transform: translate(17px, -6px) scale(0.75);
+      }
+
+      :global(legend > span) {
+        font-size: 16px;
+      }
+
+      :global(label.MuiFormLabel-root.Mui-focused) {
+        color: #79c2ff;
+      }
+      :global(.MuiOutlinedInput-notchedOutline) {
+        border: 2px solid #bbbcbc;
+        box-sizing: border-box;
+        border-radius: 3px;
+      }
+
+      :global(.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline) {
+        border-color: rgb(187, 188, 188, 0.87);
+      }
+
+      :global(.MuiOutlinedInput-root.Mui-focused
+          .MuiOutlinedInput-notchedOutline) {
+        border-color: #79c2ff;
+      }
+
+      input {
+        height: 7.2rem;
+        padding: 15px 17px 9px 17px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 21px;
+        line-height: 20px;
+        color: #bbbcbc;
+        box-sizing: border-box;
+      }
+
+      input:-internal-autofill-selected {
+        background-color: red !important;
+      }
+    }
+  }
+
+  &--gender {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    grid-column: 1/2;
+    &__label {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 21px;
+      line-height: 20px;
+
+      color: #dddddd;
+      margin-right: 25px;
+    }
+
+    :global(.MuiFormLabel-root.Mui-focused) {
+      color: currentColor;
+    }
+
+    &__group {
+      label {
+        margin: 0px;
+        &:not(:last-of-type) {
+          margin-right: 32px;
+        }
+      }
+      :global(.MuiRadio-colorSecondary.Mui-checked) {
+        color: #79c2ff;
+
+        &:hover {
+          background-color: unset;
+        }
+      }
+      :global(.MuiRadio-colorSecondary) {
+        &:hover {
+          background-color: transparent;
+        }
+      }
+
+      :global(.MuiRadio-root) {
+        color: #bbbcbc;
+        padding: 0;
+        margin-right: 9px;
+      }
+
+      :global(.MuiSvgIcon-root) {
+        width: 32px;
+        height: 32px;
+      }
+
+      :global(.MuiTypography-body1) {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 21px;
+        line-height: 20px;
+
+        color: #bbbcbc;
+      }
+    }
+  }
+
+  &--loadingSvg {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1999;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 81px;
+    svg {
+      width: 20vw;
+      height: auto;
+      animation: rotateTheWheel 2s linear infinite;
+    }
+
+    @keyframes rotateTheWheel {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(-360deg);
+      }
+    }
+  }
+}
+
+.addPerson--info__input {
+  &[data-id="fullName"],
+  &[data-id="clientId"] {
+    grid-column: 1/2;
+    p:global(.MuiFormHelperText-root) {
+      margin-top: 4px;
+      font-size: 16px;
+    }
+  }
+}

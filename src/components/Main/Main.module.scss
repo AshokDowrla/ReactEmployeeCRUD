@@ -1,0 +1,16 @@
+.main {
+  &--container {
+    width: calc(100% - 300px);
+    margin-left: auto;
+    padding-top: 81px;
+
+    @media only screen and (max-width: 1340px) {
+      width: calc(100% - 240px);
+    }
+
+    @media only screen and (max-width: 1270px) {
+      width: 100%;
+      margin-right: auto;
+    }
+  }
+}

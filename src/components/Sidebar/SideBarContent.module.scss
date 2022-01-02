@@ -1,0 +1,27 @@
+.scrollbar {
+  background-color: #edf2f7;
+  border: 1px solid #cbd5e0;
+  border-left-width: 0;
+  position: absolute;
+  width: 1.5rem;
+  height: calc(100% - 81px);
+  right: 0;
+  z-index: 1;
+}
+
+.thumb {
+  background-color: #718096;
+  border-radius: 9999px;
+  cursor: pointer;
+  right: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.track {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

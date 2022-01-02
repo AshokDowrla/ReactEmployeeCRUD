@@ -1,0 +1,8 @@
+.table {
+  &--row {
+    &__score {
+        display: flex;
+        align-items: center;
+    }
+  }
+}

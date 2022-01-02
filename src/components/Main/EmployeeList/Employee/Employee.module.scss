@@ -1,0 +1,133 @@
+.table {
+  &--row {
+    &__name {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 14px;
+
+      color: #bbbcbc;
+      margin-bottom: 5px;
+    }
+
+    &__id {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 10px;
+      line-height: 12px;
+
+      color: #dddddd;
+    }
+    &__name,
+    &__id {
+      display: block;
+    }
+
+    &__individualScore,
+    &__overallScore {
+      svg {
+        border-radius: 100px;
+      }
+
+      circle {
+        stroke-width: 15px;
+      }
+      span {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+
+        color: #bbbcbc;
+        margin-left: 12px;
+      }
+    }
+
+    &__individualScore {
+      svg {
+        color: #eb5757;
+      }
+    }
+
+    &__overallScore {
+      svg {
+        color: #27ae60;
+      }
+    }
+
+    &__editor{
+      :global(.text_icon){
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        &:not(:last-of-type){
+          margin-bottom: 6px;
+        }
+      }
+    }
+
+    &__filter {
+      svg {
+        width: 15px;
+        height: 15px;
+        margin-right: 7px;
+
+        path{
+          fill: #DDDDDD;
+        }
+      }
+    }
+  }
+
+  &--row__1 {
+    display: flex;
+    align-items: center;
+    & img {
+      width: 37px;
+      height: 37px;
+      border-radius: 100px;
+      margin-right: 12px;
+    }
+  }
+}
+
+:global(div.MuiCircularProgress-root.MuiCircularProgress-determinate) {
+  position: relative;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+
+    position: absolute;
+    z-index: 0;
+    background-color: #303741;
+    border-radius: inherit;
+  }
+  &::after {
+    content: "";
+    width: 32px;
+    height: 32px;
+
+    position: absolute;
+    z-index: -1;
+
+    border-radius: inherit;
+  }
+}
+
+:global(.MuiCircularProgress-root.MuiCircularProgress-determinate.individualScore) {
+  &::after {
+    background-color: rgba(235, 87, 87, 0.14);
+  }
+}
+
+:global(.MuiCircularProgress-root.MuiCircularProgress-determinate.overallScore) {
+  &::after {
+    background-color: rgba(39, 174, 96, 0.12);
+  }
+}
