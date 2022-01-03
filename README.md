@@ -3,7 +3,23 @@
 
 # Demo https://reactemployeecrud.firebaseapp.com/
 
+## screenshots
 
+![HomePage](screenshots/Home-1.png?raw=true "Home")
+
+![HomePage](screenshots/Home-2.png?raw=true "Home")
+
+![HomePage](screenshots/Home-3.png?raw=true "Home")
+
+![HomePage](screenshots/Home-4.png?raw=true "Home")
+
+![AddPerson](screenshots/add-1.png?raw=true "AddPerson")
+
+![AddPerson](screenshots/add-2.png?raw=true "AddPerson")
+
+![Update](screenshots/Update-1.png?raw=true "Update")
+
+![Update](screenshots/Update-2.png?raw=true "Update")
 
 # <------------ END -------------->
 
